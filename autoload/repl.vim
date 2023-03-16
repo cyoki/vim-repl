@@ -295,27 +295,27 @@ function! repl#REPLOpen(...)
                 endif
                 if g:repl_position == 0
                     if exists('g:repl_height')
-                        exe 'bo term ++close ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetShell()
+                        exe 'bo term ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetShell()
                     else
-                        exe 'bo term ++close ' . repl#REPLGetShell()
+                        exe 'bo term ' . repl#REPLGetShell()
                     endif
                 elseif g:repl_position == 1
                     if exists('g:repl_height')
-                        exe 'to term ++close ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetShell()
+                        exe 'to term ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetShell()
                     else
-                        exe 'to term ++close ' . repl#REPLGetShell()
+                        exe 'to term ' . repl#REPLGetShell()
                     endif
                 elseif g:repl_position == 2
                     if exists('g:repl_width')
-                        exe 'vert term ++close ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetShell()
+                        exe 'vert term ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetShell()
                     else
-                        exe 'vert term ++close ' . repl#REPLGetShell()
+                        exe 'vert term ' . repl#REPLGetShell()
                     endif
                 else
                     if exists('g:repl_width')
-                        exe 'vert rightb term ++close ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetShell()
+                        exe 'vert rightb term ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetShell()
                     else
-                        exe 'vert rightb term ++close ' . repl#REPLGetShell()
+                        exe 'vert rightb term ' . repl#REPLGetShell()
                     endif
                 endif
                 exe 'file ' . repl#GetConsoleName()
@@ -338,27 +338,27 @@ function! repl#REPLOpen(...)
         if exists('g:repl_python_pre_launch_command')
             if g:repl_position == 0
                 if exists('g:repl_height')
-                    exe 'bo term ++close ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetShell()
+                    exe 'bo term ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetShell()
                 else
-                    exe 'bo term ++close ' . repl#REPLGetShell()
+                    exe 'bo term ' . repl#REPLGetShell()
                 endif
             elseif g:repl_position == 1
                 if exists('g:repl_height')
-                    exe 'to term ++close ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetShell()
+                    exe 'to term ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetShell()
                 else
-                    exe 'to term ++close ' . repl#REPLGetShell()
+                    exe 'to term ' . repl#REPLGetShell()
                 endif
             elseif g:repl_position == 2
                 if exists('g:repl_width')
-                    exe 'vert term ++close ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetShell()
+                    exe 'vert term ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetShell()
                 else
-                    exe 'vert term ++close ' . repl#REPLGetShell()
+                    exe 'vert term ' . repl#REPLGetShell()
                 endif
             else
                 if exists('g:repl_width')
-                    exe 'vert rightb term ++close ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetShell()
+                    exe 'vert rightb term ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetShell()
                 else
-                    exe 'vert rightb term ++close ' . repl#REPLGetShell()
+                    exe 'vert rightb term ' . repl#REPLGetShell()
                 endif
             endif
             exe 'file ' . repl#GetConsoleName()
@@ -385,27 +385,27 @@ function! repl#REPLOpen(...)
     endif
 	if g:repl_position == 0
 		if exists('g:repl_height')
-			exe 'bo term ++close ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetName()
+			exe 'bo term ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetName()
 		else
-			exe 'bo term ++close ' . repl#REPLGetName()
+			exe 'bo term ' . repl#REPLGetName()
 		endif
 	elseif g:repl_position == 1
 		if exists('g:repl_height')
-			exe 'to term ++close ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetName()
+			exe 'to term ++rows=' . float2nr(g:repl_height) . ' ' . repl#REPLGetName()
 		else
-			exe 'to term ++close ' . repl#REPLGetName()
+			exe 'to term ' . repl#REPLGetName()
 		endif
 	elseif g:repl_position == 2
 		if exists('g:repl_width')
-			exe 'vert term ++close ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetName()
+			exe 'vert term ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetName()
 		else
-			exe 'vert term ++close ' . repl#REPLGetName()
+			exe 'vert term ' . repl#REPLGetName()
 		endif
 	else
 		if exists('g:repl_width')
-			exe 'vert rightb term ++close ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetName()
+			exe 'vert rightb term ++cols=' . float2nr(g:repl_width) . ' ' . repl#REPLGetName()
 		else
-			exe 'vert rightb term ++close ' . repl#REPLGetName()
+			exe 'vert rightb term ' . repl#REPLGetName()
 		endif
 	endif
     exe 'file ' . repl#GetConsoleName()
